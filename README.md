@@ -49,6 +49,10 @@ http://[functionappname]/api/InceptionV3Classifier?img=[url of image]
 
 ```
 
+## Local Testing
+
+For any local testing, use the sample local.settings.json and host.json, create [virtual environment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment) and run `func host start`
+
 ## Example
 
 ```
