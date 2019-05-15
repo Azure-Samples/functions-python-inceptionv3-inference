@@ -35,7 +35,7 @@ or
     - Run ```az group deployment create --name [deploymentName] --resource-group [resourceGroupName] --template-file azuredeploy.json```
 
 - Download pretrained inception V3 model
-  - Clone [this](https://github.com/taey16/tf.git) repository and copy classify_image_graph_def.pb from [here](https://github.com/taey16/tf/tree/master/imagenet) to the current InceptionV3Classifier folder
+  - Clone [this](https://github.com/taey16/tf.git) repository and copy classify_image_graph_def.pb from [here](https://github.com/taey16/tf/tree/master/imagenet) to the InceptionV3Classifier folder
 
 - Deploy Function App
   - [Create/Activate virtual environment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment)
