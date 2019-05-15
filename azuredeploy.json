@@ -11,7 +11,7 @@
             "type": "String"
         },
         "storageName": {
-            "defaultValue": "inceptionv3",
+            "defaultValue": "[uniqueString(subscription().subscriptionId, resourceGroup().id)]",
             "type": "String"
         },
         "linuxConsumptionAppName": {

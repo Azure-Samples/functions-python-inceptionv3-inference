@@ -35,6 +35,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     results = classify_image.run_inference_on_image(image_url)
     
-    logging.info(type(results))
-
     return json.dumps(results)

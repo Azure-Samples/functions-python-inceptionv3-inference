@@ -49,9 +49,6 @@ import requests
 from io import BytesIO
 from io import StringIO
 
-#import pdb
-
-
 class NodeLookup(object):
   """Converts integer node ID's to human readable labels."""
 
@@ -136,9 +133,6 @@ def run_inference_on_image(image_url):
   Returns:
     Nothing
   """
-
-  # Read image from local
-  #image_data = tf.gfile.FastGFile(os.path.join(os.getcwd(),"cropped_panda.jpg"), 'rb').read()
 
   # Read image from URL
   user_agent_header = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/12.04 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19'

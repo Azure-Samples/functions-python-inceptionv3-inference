@@ -20,19 +20,21 @@ This sample uses functions to classify an image from a pretrained Inception V3 m
 - Install Python 3.6+
 - Install [Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#v2)
 - Install Docker
+- Note: If run on Windows, use Ubuntu WSL to run deploy script
 
 ### Steps
 
-- **Skip this step for now..Does not work with private repo. Try alternate method with AZ CLI below** Click Deploy to Azure Button to deploy resources
-
+- Click Deploy to Azure Button to deploy resources
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
-- **Alternate AZ CLI Deployment**
+or
+
+- Deploy through Azure CLI
     - Open AZ CLI and run ```az group create -l [region] -n [resourceGroupName]``` to create a resource group in your Azure subscription (i.e. [region] could be westus2, eastus, etc.)
-    - Run ```az group deployment create --name [deploymentName] --resource-group [resourceGroupName] --template-file azuredeploy.json --parameters parameters.json```
+    - Run ```az group deployment create --name [deploymentName] --resource-group [resourceGroupName] --template-file azuredeploy.json```
 
 - Download pretrained inception V3 model
-  - Go [here](https://github.com/taey16/tf/tree/master/imagenet) and copy classify_image_graph_def.pb to this folder
+  - Clone the repository and copy classify_image_graph_def.pb from [here](https://github.com/taey16/tf/tree/master/imagenet) to the InceptionV3Classifier folder
 
 - Deploy Function App
   - [Create/Activate virtual environment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment)
