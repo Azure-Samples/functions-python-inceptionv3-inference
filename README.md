@@ -25,6 +25,7 @@ This sample uses functions to classify an image from a pretrained Inception V3 m
 ### Steps
 
 - Click Deploy to Azure Button to deploy resources
+
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 or
