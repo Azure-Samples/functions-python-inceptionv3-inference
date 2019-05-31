@@ -37,9 +37,11 @@ or
 - Download pretrained inception V3 model
   - Clone [this](https://github.com/taey16/tf.git) repository and copy classify_image_graph_def.pb from [here](https://github.com/taey16/tf/tree/master/imagenet) to the InceptionV3Classifier folder
 
-- Deploy Function App
-  - [Create/Activate virtual environment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment)
+- Deploy Function App to Azure
   - Run `func azure functionapp publish [functionAppName] --build-native-deps` 
+
+- Local Development
+  - Refer links below to create/activate virtual environment for local development
 
 ## Test
 
@@ -56,15 +58,18 @@ For any local testing, use the sample local.settings.json and host.json, create 
 ## Example
 
 ```
-http post http://localhost:7071/api/InceptionV3Classifier\?img\="https://www.balisafarimarinepark.com/wp-content/uploads/2017/11/19437535_10154869044788931_4755399083724169206_n-671.jpg"
+http post https://[functionappname].azurewebsites.net/api/inceptionv3classifier\?img\=https://www.balisafarimarinepark.com/wp-content/uploads/2017/11/19437535_10154869044788931_4755399083724169206_n-671.jpg
 
 [
     "tiger, Panthera tigris (score = 0.86580)"
 ]
 ```
 
+Note: If using Postman, remove the escape characters from the query param of the URL.
+
 # References
 
 - [Create your first Python Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python)
+- [Create/Activate virtual environment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment)
 - [Tensorflow Tutorials](https://www.tensorflow.org/tutorials/)
 
