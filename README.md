@@ -1,10 +1,11 @@
 ---
-topic: sample
+page_type: sample
 languages:
     - python
 products:
+    - azure
     - azure-functions
-author: priyaananthasankar
+description: "This sample uses functions to classify an image from a pretrained Inception V3 model using tensorflow APIs."
 ---
 
 # Image Classification using Tensorflow
