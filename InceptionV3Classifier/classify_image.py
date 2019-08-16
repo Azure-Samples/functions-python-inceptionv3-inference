@@ -37,6 +37,7 @@ from __future__ import print_function
 import logging
 import argparse
 import os.path
+import pathlib
 import re
 import sys
 import tarfile
@@ -56,9 +57,9 @@ class NodeLookup(object):
                label_lookup_path=None,
                uid_lookup_path=None):
     if not label_lookup_path:
-      label_lookup_path = os.path.join(os.getcwd(),"InceptionV3Classifier",'imagenet_2012_challenge_label_map_proto.pbtxt')
+      label_lookup_path = os.path.join(pathlib.Path(os.path.abspath(__file__)).parent, 'imagenet_2012_challenge_label_map_proto.pbtxt')
     if not uid_lookup_path:
-      uid_lookup_path = os.path.join(os.getcwd(),"InceptionV3Classifier",'imagenet_synset_to_human_label_map.txt')
+      uid_lookup_path = os.path.join(pathlib.Path(os.path.abspath(__file__)).parent, 'imagenet_synset_to_human_label_map.txt')
     self.node_lookup = self.load(label_lookup_path, uid_lookup_path)
 
   def load(self, label_lookup_path, uid_lookup_path):
@@ -116,7 +117,7 @@ def create_graph():
   """Creates a graph from saved GraphDef file and returns a saver."""
 
   #model_file = os.path.join(os.getcwd(),"InceptionV3Classifier","classify_image_graph_def.pb")
-  model_file = os.path.join(os.getcwd(),"InceptionV3Classifier","classify_image_graph_def.pb")
+  model_file = os.path.join(pathlib.Path(os.path.abspath(__file__)).parent, "classify_image_graph_def.pb")
   logging.info(model_file)
   # Creates graph from saved graph_def.pb.
   with tf.gfile.FastGFile(model_file, 'rb') as f:
