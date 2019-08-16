@@ -6,6 +6,7 @@ products:
     - azure
     - azure-functions
 description: "This sample uses functions to classify an image from a pretrained Inception V3 model using tensorflow APIs."
+azureDeploy: "https://github.com/Azure-Samples/functions-python-inceptionv3-inference/blob/master/azuredeploy.json"
 ---
 
 # Image Classification using Tensorflow
