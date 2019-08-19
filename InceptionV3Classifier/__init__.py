@@ -28,11 +28,12 @@ from . import classify_image
 import urllib
 from urllib.request import urlopen
 
+
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-     
+
     image_url = req.params.get('img')
 
     results = classify_image.run_inference_on_image(image_url)
-    
+
     return json.dumps(results)
