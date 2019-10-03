@@ -30,9 +30,16 @@ from urllib.request import urlopen
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-     
-    image_url = req.params.get('img')
 
-    results = classify_image.run_inference_on_image(image_url)
-    
-    return json.dumps(results)
+    image_url = req.params.get('img')
+    if not image_url:
+        return func.HttpResponse("'img' query string is required.", status_code=400)
+
+    try:
+        results = classify_image.run_inference_on_image(image_url)
+        return json.dumps(results)
+    except Exception as e:
+      return func.HttpResponse(f"Error processing the image: {e}", status_code=500)
+
+
+
