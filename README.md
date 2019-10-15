@@ -1,10 +1,10 @@
 ---
 page_type: sample
 languages:
-    - python
+- python
 products:
-    - azure
-    - azure-functions
+- azure
+- azure-functions
 description: "This sample uses functions to classify an image from a pretrained Inception V3 model using tensorflow APIs."
 azureDeploy: "https://github.com/Azure-Samples/functions-python-inceptionv3-inference/blob/master/azuredeploy.json"
 ---
@@ -13,18 +13,18 @@ azureDeploy: "https://github.com/Azure-Samples/functions-python-inceptionv3-infe
 
 This sample uses functions to classify an image from a pretrained Inception V3 model using tensorflow API's
 
-# Getting Started
+## Getting Started
 
-## Deploy to Azure
+### Deploy to Azure
 
-### Prerequisites
+#### Prerequisites
 
 - Install Python 3.6+
-- Install [Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#v2)
+- Install [Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local#v2)
 - Install Docker
 - Note: If run on Windows, use Ubuntu WSL to run deploy script
 
-### Steps
+#### Steps
 
 - Click Deploy to Azure Button to deploy resources
 
@@ -45,21 +45,21 @@ or
 - Local Development
   - Refer links below to create/activate virtual environment for local development
 
-## Test
+### Test
 
 - Send the following body in a HTTP POST request as a query param
-```
+
+```http
 http://[functionappname]/api/InceptionV3Classifier?img=[url of image]
-
 ```
 
-## Local Testing
+### Local Testing
 
 For any local testing, use the sample local.settings.json and host.json, create [virtual environment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment) and run `func host start`
 
-## Example
+### Example
 
-```
+```http
 http post https://[functionappname].azurewebsites.net/api/inceptionv3classifier\?img\=https://www.balisafarimarinepark.com/wp-content/uploads/2017/11/19437535_10154869044788931_4755399083724169206_n-671.jpg
 
 [
@@ -69,9 +69,9 @@ http post https://[functionappname].azurewebsites.net/api/inceptionv3classifier\
 
 Note: If using Postman, remove the escape characters from the query param of the URL.
 
-# References
+## References
 
-- [Create your first Python Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python)
-- [Create/Activate virtual environment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment)
+- [Create your first Python Function](https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-python)
+- [Create/Activate virtual environment](https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment)
 - [Tensorflow Tutorials](https://www.tensorflow.org/tutorials/)
 
