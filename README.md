@@ -5,13 +5,13 @@ languages:
 products:
 - azure
 - azure-functions
-description: "This sample uses functions to classify an image from a pretrained Inception V3 model using tensorflow APIs."
+description: "This sample uses functions to classify an image from a pretrained Inception V3 model using TensorFlow APIs."
 azureDeploy: "https://github.com/Azure-Samples/functions-python-inceptionv3-inference/blob/master/azuredeploy.json"
 ---
 
-# Image Classification using Tensorflow
+# Image Classification using TensorFlow
 
-This sample uses functions to classify an image from a pretrained Inception V3 model using tensorflow API's
+This sample uses functions to classify an image from a pretrained Inception V3 model using TensorFlow API's
 
 ## Getting Started
 
@@ -73,5 +73,5 @@ Note: If using Postman, remove the escape characters from the query param of the
 
 - [Create your first Python Function](https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-python)
 - [Create/Activate virtual environment](https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-python#create-and-activate-a-virtual-environment)
-- [Tensorflow Tutorials](https://www.tensorflow.org/tutorials/)
+- [TensorFlow Tutorials](https://www.tensorflow.org/tutorials/)
 
